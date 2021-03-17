@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta Information -->
+    <meta name="author" content="Er.Prafull Ranjan (IIT BBS )">
+    <meta name="description" content="Creating Responsive Animated Website using HTML5, CSS3, Bootstrap & JavaScript">
+
+	<!-- Webpage Title -->
+    <title>Responsive Bootstrap Website with Animation | Example 8</title>
+
+    <!-- To ensure proper rendering and touch zooming in mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CDN for Font Awesome Icons -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+    <!-- CDN for Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code|Ubuntu:400,600|Dancing+Script:400,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap (CSS) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- "Animate" Plugin to get Animation (But animation will start as soon as page loads) -->
+	<link rel="stylesheet" type="text/css" href="styles/animate.min.css">
+	<!-- WOW Plugin to Start Animation on Scroll -->
+	<script type="text/javascript" src="scripts/wow.min.js"></script>
+	<!-- Start WOW() service -->
+	<script type="text/javascript">new WOW().init();</script>
+
+	<!-- External CSS Stylesheet -->
+    <link href="styles/layout.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+
+
+<body id="top" data-spy ="Scroll" data-target=".navbar" data>
+
+     <!-- additional menu links -->
+     <div class="wrapper bg-white border " id="home">
+       <div class="container">
+
+         <nav class="navbar navbar-expand-md navbar-light bg-white p-0">
+             <div class="collapse navbar-collapse justify-content-between" id="secondaryNavbar">
+                   <!-- links(Left) -->
+                   <ul class="navbar-nav">
+                     <li class="nav-item px-2">
+                        <a href="#">
+                              <p class="m-0 text-uppercase "><small>Home</small></p>
+                        </a>
+                     </li>
+
+                     <li class="nav-item px-2">
+                        <a href="#">
+                              <p class="m-0 text-uppercase"><small>SITEMAP</small></p>
+                        </a>
+                     </li>
+
+                     <li class="nav-item px-2">
+                        <a href="#">
+                              <p class="m-0 text-uppercase"><small>Archive</small></p>
+                        </a>
+                     </li>
+
+                     <li class="nav-item px-2">
+                        <a href="#contact">
+                              <p class="m-0 text-uppercase"><small>contact Us</small></p>
+                        </a>
+                     </li>
+                   </ul>
+
+                      <!-- social icons(right) -->
+
+                   <ul class="d-flex social-icon wow rubberBand" data-wow-delay="3s">
+                     <li><a href="#" class="faicon-facebook rounded-circle">
+                        <i class="fab fa-facebook"></i>
+                     </a></li>
+
+                     <li><a href="#" class="faicon-twitter rounded-circle">
+                        <i class="fab fa-twitter"></i>
+                     </a></li>
+
+                     <li><a href="#" class="faicon-instagram rounded-circle">
+                        <i class="fab fa-instagram"></i>
+                     </a></li>
+
+                     <li><a href="#" class="faicon-linkedin rounded-circle">
+                        <i class="fab fa-linkedin"></i>
+                     </a></li>
+
+                     <li><a href="#" class="faicon-pinterest rounded-circle">
+                        <i class="fab fa-pinterest"></i>
+                     </a></li>
+
+
+                   </ul>
+
+             </div>
+
+         </nav>
+       </div>
+     </div>
+
+     <div class="wrapper py-3 px-5 text-secondary bg-white" id="header">
+       <header class="d-flex flex-row justify-content-between">
+         <h1 class="d-flex align-items-center wow tada" data-wow-delay="0.2s">
+           <a href="index.html" class="t3">
+             praFull.<span class="text-success">tech</span>
+
+           </a>
+         </h1>
+         <h2 class="align-self-end wow bounce" data-wow-delay="2s">
+           <small>One Step for All Web Design Tutorials </small>
+         </h2>
+       </header>
+
+     </div>
+  <!-- Navigation bar (Menu Bar) -->
+  <div class="wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary p-0" id="mainNavbar">
+            <!-- NavBar Logo -->
+            <a href="#home" class="navbar-brand py-2 px-3">
+              <img src="gallery/logo.png" style="height :34px;"alt="">
+            </a>
+                <!-- collapse button to replace links below 992px wide screen -->
+
+              <button type="button" class="navbar-toggler" data-toggler="collapse"
+              data-target="#mainNavbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+   <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-around" id="mainNavbarContent">
+             <!-- align on left -->
+             <ul class="navbar-nav">
+               <li class="nav-item"><a href="#home" class="nav-link px-3">HOME</a></li>
+               <li class="nav-item"><a href="#services" class="nav-link px-3">SERVICES</a></li>
+               <li class="nav-item"><a href="#text-over-image" class="nav-link px-3">TEXT-1</a></li>
+               <li class="nav-item"><a href="#text-overlap-image" class="nav-link px-3">TEXT-2</a></li>
+               <li class="nav-item"><a href="#testimonials-carousel" class="nav-link px-3">TESTIMONIALS</a></li>
+               <li class="nav-item"><a href="#news-blog" class="nav-link px-3">NEWS</a></li>
+
+                 <!-- link with dropdown -->
+                 <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle px-3"
+                    id="navbarDropdown" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false"> PAGES</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a href="#" class="dropdown-item">Page-1</a>
+                      <a href="#" class="dropdown-item">Page-2</a>
+                      <div class="dropdown-divider">
+                        <a href="#" class="dropdown-item">Something else Here </a>
+                      </div>
+                    </div>
+                 </li>
+                 <li class="nav-item"><a href="#contact" class="nav-link px-3">CONTACT</a></li>
+
+             </ul>
+
+             <!-- Align on right -->
+             <ul class="navbar-nav">
+               <li class="nav-item">
+                  <a href="signup.html" class="nav-link  px-3">Sign Up</a>
+               </li>
+
+             </ul>
+
+        </div>
+
+      </nav>
+
+  </div>
+
+
+   <!-- cover image -->
+   <div class="wrapper overlay" id="cover-image">
+     <div class="hor-cen ml-5 pl-5" id="pageintro">
+       <article class="ml-5 pl-5 wow bounceInUp" data-wow-delay="0.2s">
+         <h3 class="heading text-white">Bootstrap Website</h3>
+          <p class="mysecondary">Create your Bootstrap Website!</p>
+          <footer class="mt-5 pt-5">
+              <ul class="m-0 p-0">
+                <li class="d-inline-block mr-4">
+                  <a href="#" class="btn btn-danger btn-lg">GET STARTED</a>
+                </li>
+                <li class="d-inline-block">
+                  <a href="#" class="btn btn-outline-secondary btn-lg text-white">Know More!</a>
+                </li>
+              </ul>
+          </footer>
+       </article>
+
+     </div>
+
+   </div>
+
+
+
+  <!-- Body container  -->
+       <div class="container">
+          <!-- border -->
+          <div class=" content-wrapper border border-light rounded">
+                 <!-- services -->
+                 <div class="wrapper bg-white text-secondary p-5" id="services">
+                    <div class="p-5">
+                      <!-- heading -->
+                      <div class="text-center">
+                          <h2 class="heading">Some of the Services Offered</h2>
+                          <p>what we are damn good at!</p>
+                        </div>
+                        <ul class="row">
+                          <!-- first icon -->
+                          <li class="col-md-4 pt-5 pr-5 wow zoomInUp" data-wow-delay="0.3s">
+                              <article>
+                                <i class="fas fa-tools"></i>
+                                <h6 class="heading">Tools</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                   elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                   aliqua. [&hellip;]
+                                </p>
+                                  <footer class="mt-4">
+                                      <a href="#" class="btn btn-danger">Read More</a>
+                                  </footer>
+
+                              </article>
+                          </li>
+
+                          <!-- 2nd icon -->
+                          <li class="col-md-4 pt-5 pr-5 wow zoomInUp" data-wow-delay="0.4s">
+                              <article>
+                                <i class="fas fa-drafting-compass"></i>
+                                <h6 class="heading">Drafting Compass</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                   elit, sed do eiusmod  labore et dolore magna
+                                   aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui[&hellip;]
+                                </p>
+                                  <footer class="mt-4">
+                                      <a href="#" class="btn btn-danger">Read More</a>
+                                  </footer>
+
+                              </article>
+                          </li>
+
+                          <!-- 3rd icon -->
+                          <li class="col-md-4 pt-5 pr-5 wow zoomInUp" data-wow-delay="0.5s">
+                              <article>
+                                <i class="fas fa-atom"></i>
+                                <h6 class="heading">Atom</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                                   elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                   aliqua.officia deserunt mollit anim id est laborum.Pratan jakurh flings rotfa. [&hellip;]
+                                </p>
+                                  <footer class="mt-4">
+                                      <a href="#" class="btn btn-danger">Read More</a>
+                                  </footer>
+
+                              </article>
+                          </li>
+
+                        </ul>
+                              </div>
+                                </div>
+                  <!-- services end -->
+
+                      <!-- Text Block over Image -->
+                  <div class="wrapper p-5" id="text-over-image">
+                     <div class="d-flex flex-row-reverse p-5">
+                       <div class="col-md-6 p-5 overlay red wow jackInTheBox" data-wow-delay="0.5s">
+                         <section>
+                              <h2 class="heading">Text Block Over Image</h2>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                 quis nostrud exercitation ullamco laboris nisi ex.</p>
+                                 <ul class="fa-ul">
+                                   <li><i class="fa-li fa fa-check-circle"></i> ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprehenderit.</li>
+                                    <li><i class="fa-li fa fa-check-circle"></i> sit amet, consectetur adipisicing elit, sed do eiusmod
+                                      tempor incididunt ut labore et dolore magna aliqua.</li>
+                                 </ul>
+                                 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    ullamco laboris nisi ut aliquip ex ea .</p>
+                                    <footer>
+                                      <a href="#" class="btn btn-danger">Read More &raquo;</a>
+                                    </footer>
+                         </section>
+
+                       </div>
+
+                     </div>
+                  </div>
+                  <!-- Text Block over Image Ends -->
+                  <!-- Text Block overlapping Image -->
+                  <div class="wrapper bg-white text-secondary p-5"
+                  id="text-overlap-image">
+                   <div class="row p-5 align-items-center justify-content-center">
+                     <!-- first column (Image) -->
+                     <div class="col-md-7" id="first-column">
+                      <a href="#">  <img src="gallery/pic-overlap.jpg" >  </a>
+                       </div>
+                        <!-- second column(Text) -->
+                        <div class="col-md-5 p-5 wow lightSpeedIn" data-wow-delay="0.5s" id="second-column">
+                          <p class="font-xs">transform yourself as you want</p>
+                          <h2 class="heading mb-3">Text Block Overlapping Image</h2>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                             <p>
+
+                             velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                             sunt in culpa qui officia deserunt mollit anim id est laborum.[&hellip;]</p>
+                             <footer><a href="#">Read More &raquo; </a></footer>
+                        </div>
+
+
+
+                   </div>
+
+                  </div>
+                  <!-- Text Block overlapping Image Ends-->
+
+                  <!-- TESTIMONIALS carousel -->
+                      <div class="carousel slide wrapper overlay red p-5 teXt wow flipInX" data-wow-delay="0.5s" data-ride="carousel"
+                      id="testimonials-carousel">
+                      <!-- title -->
+                      <div class="text-center pt-5">
+                        <h2 class="heading">Some of Our Testimonials</h2>
+                        <p>Est in condimentum maximus sapien sagittis donec pulvinar sem ac</p>
+
+                      </div>
+                          <ul class="carousel-indicators" data-keyboard="true">
+                            <li data-target="#testimonials-carousel" data-slide-to="0"
+                            class="active"></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="1"
+                            ></li>
+                            <li data-target="#testimonials-carousel" data-slide-to="2"
+                            ></li>
+
+                          </ul>
+                          <!-- slides -->
+              <div class="carousel-inner pb-5">
+                 <!-- First slide(Active) -->
+                 <div class="carousel-item active">
+                   <div class="row testimonials justify-content-center">
+   <article class="col-md-5 pt-5 text-center">
+     <img src="gallery/face-1.png" style="height:150px;" class="rounded-circle">
+    <blockquote class="my-3" >
+        "I just wanted to let you know that you guys do a really good job.
+        I'm glad I decided to work with you. It's really great how easy
+        your website are to update and manage.<br> I just choose the page, make the change and click save.
+      It's so simple. <br> Thanks, guys!"
+    </blockquote>
+    <h5 class="heading">Kundan K R</h5>
+    <p class="font-xs">Varified user</p>
+
+                     </article>
+
+         <article class="col-md-5 pt-5 text-center">
+           <img src="gallery/sujeet.jpeg" style="height:150px;" class="rounded-circle">
+          <blockquote class="my-3" >
+              "I just wanted to let you know that you guys do a really good job.
+              I'm glad I decided to work with you. It's really great how easy
+              your website are to update and manage.<br> I just choose the page, make the change and click save.
+            It's so simple. <br> Thanks, guys!"
+          </blockquote>
+          <h5 class="heading">Sujeet Kumar</h5>
+          <p class="font-xs">Varified user</p>
+
+   </article>
+
+
+
+                               </div>
+
+                             </div>
+
+        <!-- Second slide -->
+
+          <div class="carousel-item ">
+              <div class="row testimonials justify-content-center">
+               <article class="col-md-5 pt-5 text-center">
+                 <img src="gallery/face-1.png" style="height:150px;" class="rounded-circle">
+                <blockquote class="my-3" >
+                    "I just wanted to let you know that you guys do a really good job.
+                    I'm glad I decided to work with you. It's really great how easy
+                    your website are to update and manage.<br> I just choose the page, make the change and click save.
+                  It's so simple. <br> Thanks, guys!"
+                </blockquote>
+                <h5 class="heading">Kundan K R</h5>
+                <p class="font-xs">Varified user</p>
+
+                                 </article>
+
+                     <article class="col-md-5 pt-5 text-center">
+                       <img src="gallery/sujeet.jpeg" style="height:150px;" class="rounded-circle">
+                      <blockquote class="my-3" >
+                          "I just wanted to let you know that you guys do a really good job.
+                          I'm glad I decided to work with you. It's really great how easy
+                          your website are to update and manage.<br> I just choose the page, make the change and click save.
+                        It's so simple. <br> Thanks, guys!"
+                      </blockquote>
+                      <h5 class="heading">Sujeet Kumar</h5>
+                      <p class="font-xs">Varified user</p>
+
+               </article>
+                    </div>
+                     </div>
+
+                     <!-- third slide -->
+                     <div class="carousel-item ">
+                         <div class="row testimonials justify-content-center">
+                          <article class="col-md-5 pt-5 text-center">
+                            <img src="gallery/face-1.png" style="height:150px;" class="rounded-circle">
+                           <blockquote class="my-3" >
+                               "I just wanted to let you know that you guys do a really good job.
+                               I'm glad I decided to work with you. It's really great how easy
+                               your website are to update and manage.<br> I just choose the page, make the change and click save.
+                             It's so simple. <br> Thanks, guys!"
+                           </blockquote>
+                           <h5 class="heading">Kundan K R</h5>
+                           <p class="font-xs">Varified user</p>
+
+                                            </article>
+
+                                <article class="col-md-5 pt-5 text-center">
+                                  <img src="gallery/sujeet.jpeg" style="height:150px;" class="rounded-circle">
+                                 <blockquote class="my-3" >
+                                     "I just wanted to let you know that you guys do a really good job.
+                                     I'm glad I decided to work with you. It's really great how easy
+                                     your website are to update and manage.<br> I just choose the page, make the change and click save.
+                                   It's so simple. <br> Thanks, guys!"
+                                 </blockquote>
+                                 <h5 class="heading">Sujeet Kumar</h5>
+                                 <p class="font-xs">Varified user</p>
+
+                          </article>
+                               </div>
+                                </div>
+                                  </div>
+
+           <!-- left and Right Control buttons -->
+              <a href="#testimonials-carousel" class="carousel-control-prev"
+              data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+
+            <a href="#testimonials-carousel" class="carousel-control-next"
+            data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+
+
+                      </div>
+                  <!-- TESTIMONIALS carousel Ends -->
+
+                  <!-- News and Updates -->
+       <div class="wrapper   p-5 bg-light text-secondary wow pulse" data-wow-delay="0.6s" id="news-blog">
+          <div class="p-5 ">
+            <!-- title -->
+            <div class="text-center">
+              <h2 class="heading">News and Updates</h2>
+              <p>Not targeted vestibulum sapien imperdiet urna purus dignissim..</p>
+
+            </div>
+            <!-- content -->
+                <div class="row blog">
+                  <div class="col-md-7">
+                     <article class="pt-5">
+                         <figure>
+                           <a href="#" class="img-hover">
+                           <img src="gallery/pic-blog-1.jpg" alt=""></a>
+                            </figure>
+                            <div class="textwrap">
+                              <h5>Electronic Gadgets</h5>
+                              <ul class="meta m-0 p-0">
+                                <li><i class="fa fa-user"></i><a href="#"> Admin</a>
+                                </li>
+                                <li><i class="fa fa-tag"></i><a href="#"> Technology</a>
+                                </li>
+                                <li><i class="fa fa-comments"></i><a href="#"> 23 Comments</a>
+                                </li>
+                              </ul>
+
+                            </div>
+
+
+                     </article>
+
+                  </div>
+                  <div class="col-md-5 row hor-cen">
+                            <article class="pt-5 col-md-6">
+                                <figure>
+                                  <a href="#" class="img-hover">
+                                  <img src="gallery/pic-blog-2.jpg" alt=""></a>
+                               </figure>
+                                   <div class="textwrap">
+
+                                        <h5>Tons of Books</h5>
+
+                                  <ul class="meta m-0 p-0">
+                                       <li><i class="fa fa-user"></i><a href="#"> Admin</a> </li>
+
+                                       <li><i class="fa fa-tag"></i><a href="#"> Literature</a> </li>
+
+                                       <li><i class="fa fa-comments"></i><a href="#"> 16 Comments</a></li>
+
+                                  </ul>
+
+                                   </div>
+                               </article>
+
+                               <article class="pt-5 col-md-6">
+                                   <figure>
+                                     <a href="#" class="img-hover">
+                                     <img src="gallery/pic-blog-3.jpg" alt=""></a>
+                                  </figure>
+                                      <div class="textwrap">
+
+                                           <h5>A Yellow Coffee Mug</h5>
+
+                                     <ul class="meta m-0 p-0">
+                                          <li><i class="fa fa-user"></i><a href="#"> Admin</a> </li>
+
+                                          <li><i class="fa fa-tag"></i><a href="#"> Lifestyle</a> </li>
+
+                                          <li><i class="fa fa-comments"></i><a href="#"> 13 Comments</a></li>
+
+                                     </ul>
+
+                                      </div>
+                                  </article>
+
+                                  <article class="pt-5 col-md-6">
+                                      <figure>
+                                        <a href="#" class="img-hover">
+                                        <img src="gallery/pic-2.jpg" alt=""></a>
+                                     </figure>
+                                         <div class="textwrap">
+
+                                              <h5>Adventure Awaits You</h5>
+
+                                        <ul class="meta m-0 p-0">
+                                             <li><i class="fa fa-user"></i><a href="#"> Admin</a> </li>
+
+                                             <li><i class="fa fa-tag"></i><a href="#"> Travel</a> </li>
+
+                                             <li><i class="fa fa-comments"></i><a href="#"> 32 Comments</a></li>
+
+                                        </ul>
+
+                                         </div>
+                                     </article>
+
+                                     <article class="pt-5 col-md-6">
+                                         <figure>
+                                           <a href="#" class="img-hover">
+                                           <img src="gallery/pic-3.jpg" alt=""></a>
+                                        </figure>
+                                            <div class="textwrap">
+
+                                                 <h5>Golden Opportunity</h5>
+
+                                           <ul class="meta m-0 p-0">
+                                                <li><i class="fa fa-user"></i><a href="#"> Admin</a> </li>
+
+                                                <li><i class="fa fa-tag"></i><a href="#"> Category</a> </li>
+
+                                                <li><i class="fa fa-comments"></i><a href="#"> 25 Comments</a></li>
+
+                                           </ul>
+
+                                            </div>
+                                        </article>
+
+
+
+
+                  </div>
+
+                </div>
+
+          </div>
+
+
+       </div>
+
+                    <!-- News and Updates Ends-->
+                    <!-- Body footer -->
+                    <div class="wrapper text-grey p-5 wow rubberBand" data-wow-delay="0.5s" id="body-footer">
+                      <footer class="row">
+                          <!-- address -->
+                          <div class="col-md-4 py-5" id="contact">
+                            <h5 class="text-white py-3">You Can Reach Us At</h5>
+                            <ul class="linklist contact mb-5 p-0">
+                              <li> <i class="fa fa-map-marker"></i>
+                                <address>
+                                  Street Name  &amp; Number,
+                                  <br>Barachatti (Gaya)-824201
+                                   <br>Bihar, India
+
+
+                                </address>
+                              </li>
+                              <li> <i class="fa fa-phone"></i>
+                                +91 7366 832 105
+                              </li>
+                              <li><i class="fa fa-envelope"></i>
+                                rprafull1999@gmail.com
+                              </li>
+
+                            </ul>
+                            <ul class=" social-icon wow shake" data-wow-delay="1.5s">
+                              <li><a href="#" class="faicon-facebook rounded-circle">
+                                 <i class="fab fa-facebook"></i>
+                              </a></li>
+
+                              <li><a href="#" class="faicon-twitter rounded-circle">
+                                 <i class="fab fa-twitter"></i>
+                              </a></li>
+
+                              <li><a href="#" class="faicon-instagram rounded-circle">
+                                 <i class="fab fa-instagram"></i>
+                              </a></li>
+
+                              <li><a href="#" class="faicon-linkedin rounded-circle">
+                                 <i class="fab fa-linkedin"></i>
+                              </a></li>
+
+                              <li><a href="#" class="faicon-pinterest rounded-circle">
+                                 <i class="fab fa-pinterest"></i>
+                              </a></li>
+
+
+                            </ul>
+
+
+                          </div>
+
+                          <!-- latest from our blog -->
+                          <div class="col-md-4 py-5">
+                             <h5 class="text-white py-3 ">Latest From Our Blog</h5>
+                             <ul class="linklist m-0 p-0">
+                               <li><article >
+                                 <h5 class="m-0 p-0"><a href="#">What is Lorem Ipsum ?</a>
+                                 </h5>
+                                 <time class="font-xs d-block" datetime="2020-06-30">Tuesday, 30<sup>th</sup> June 2020</time>
+                                 <p class="p-0 m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    labor and in pain, and vitality, so that long-but some important things to do eiusmod.
+                                     Over the years come, who nostrud exercise, the school district may not work. [&hellip;].</p>
+
+                               </article>
+                               </li>
+
+                               <li><article >
+                                 <h5 class="m-0 p-0"><a href="#">Why do we use it?</a>
+                                 </h5>
+                                 <time class="font-xs d-block" datetime="2020-06-29">Monday, 29<sup>th</sup> June 2020</time>
+                                 <p class="p-0 m-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at
+                                   its layout. It has a more-or-less normal distribution of letters [&hellip;].</p>
+
+                               </article>
+                               </li>
+
+                             </ul>
+                          </div>
+
+                          <!-- Newsletter -->
+                          <div class="col-md-4 py-5">
+                               <h5 class="text-white py-3">Join Our Newsletter</h5>
+                               <p class="p-0 mb-5">Our free newsletter will keep you up to
+                               date on our latest publictions, recent announcements
+                             and upcoming press conferences.</p>
+                             <form action="#" method="post">
+                               <fieldset>
+                                  <input class="mb-3" type="text" name="Name" placeholder="Name">
+                                  <input class="mb-3" type="email" name="Email" placeholder="Email">
+                                  <button type="submit" class="btn btn-danger">Submit</button>
+                               </fieldset>
+
+                             </form>
+                          </div>
+                      </footer>
+
+                    </div>
+                      <!-- Body footer  Ends-->
+
+          </div>
+
+       </div>
+   <!-- Body container ends -->
+
+   <!-- copyright -->
+   <div class="px-5 mx-5" id="copyright">
+     <div class="d-flex justify-content-between">
+       <p>copyright &copy; 2020-All rights Reserved -
+          <a href="#">praFull.tech</a>
+       </p>
+       <p>Template by <a href="https:/www.facebook.com" target="_blank" title="Bootstrap Template">praFull.tech</a>
+       </p>
+     </div>
+
+   </div>
+
+   <!-- Scroll to Top button -->
+   <a href="#top" id="backtotop"><i class="fa fa-chevron-up"></i>
+   </a>
+
+<!-- Floating Social Media Bar -->
+   <div class="wrapper d-none" id="sticky-social-icon">
+     <ul class="float-sticky-bar">
+       <li class="position-fb faicon-facebook">
+           <a href="#">Like Us!</a><i class="fab fa-facebook"></i>
+       </li>
+       <li class="position-tw faicon-twitter">
+           <a href="#">Like Us!</a><i class="fab fa-twitter"></i>
+       </li>
+       <li class="position-in faicon-instagram">
+           <a href="#">Like Us!</a><i class="fab fa-instagram"></i>
+       </li>
+       <li class="position-li faicon-linkedin">
+           <a href="#">Like Us!</a><i class="fab fa-linkedin"></i>
+       </li>
+       <li class="position-pi faicon-pinterest">
+           <a href="#">Like Us!</a><i class="fab fa-pinterest"></i>
+       </li>
+     </ul>
+
+   </div>
+
+
+
+
+    <!-- Bootstrap (JQuery) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Plugin (Popper.js) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap (JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- Position BackToTop button after cover image is scrolled up -->
+    <script type="text/javascript" src="scripts/jquery.backtotop.js"></script>
+
+    <!-- Make The Navigation Bar fixed on top once the header is scrolled up -->
+    <script type="text/javascript" src="scripts/jquery.navbar-fix-top.js"></script>
+
+    <!-- Position Sticky Social Bar after cover image is scrolled up -->
+    <script type="text/javascript" src="scripts/jquery.sticky-social-bar.js"></script>
+</body>
+</html>
